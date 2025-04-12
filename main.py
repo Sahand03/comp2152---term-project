@@ -7,6 +7,7 @@ from hero import Hero
 from monster import Monster
 import os
 import platform
+from magic_chest import MagicChest
 
 print("Operating System:", os.name)
 print("Python Version:", platform.python_version())
@@ -35,6 +36,10 @@ num_stars = 0
 # Create Hero and Monster objects
 hero = Hero()
 monster = Monster()
+chest = MagicChest()
+chest.open(hero)
+print(f"Your new health: {hero.health_points}")
+
 
 print("    ------------------------------------------------------------------")
 print(f"    |    Hero created with Combat Strength = {hero.combat_strength} and Health = {hero.health_points}")
